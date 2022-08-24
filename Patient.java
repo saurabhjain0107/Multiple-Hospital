@@ -1,11 +1,33 @@
 package com.bridgelabz;
 
 public class Patient {
+    private String hospitalName;
     private String name;
     private  int age;
-    private int phoneNumber;
+    private long phoneNumber;
     private String city;
     private String state;
+    private  String department;
+
+    public Patient() {
+
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getHospitalName() {
+        return hospitalName;
+    }
+
+    public void setHospitalName(String hospitalName) {
+        this.hospitalName = hospitalName;
+    }
 
     public String getName() {
         return name;
@@ -23,11 +45,11 @@ public class Patient {
         this.age = age;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -47,23 +69,26 @@ public class Patient {
         this.state = state;
     }
 
-
-
-    public Patient(String name, int age, int phoneNumber, String city, String state) {
+    public Patient(String hospitalName, String name, int age, long phoneNumber, String city, String state, String department) {
+        this.hospitalName = hospitalName;
         this.name = name;
         this.age = age;
         this.phoneNumber = phoneNumber;
         this.city = city;
         this.state = state;
+        this.department = department;
     }
+
     @Override
     public String toString() {
         return "Patient{" +
-                "name='" + name + '\'' +
+                "hospitalName='" + hospitalName + '\'' +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", phoneNumber=" + phoneNumber +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
+                ", departmt='" + department + '\'' +
                 '}';
     }
 }
