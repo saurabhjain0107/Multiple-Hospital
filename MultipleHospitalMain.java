@@ -13,5 +13,6 @@ public class MultipleHospitalMain {
         Hospital secondHospital = new Hospital();
         secondHospital.addPatient();
         System.out.println(secondHospital.patientList);
+
     }
 }

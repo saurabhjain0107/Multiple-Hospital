@@ -12,7 +12,6 @@ public class Patient {
     public Patient() {
 
     }
-
     public String getDepartment() {
         return department;
     }
